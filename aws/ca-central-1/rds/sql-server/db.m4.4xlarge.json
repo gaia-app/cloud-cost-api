@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "ca-central-1",
+  "service": "ec2",
+  "instanceType": "db.m4.4xlarge",
+  "databaseEngine": "sql-server",
+  "onDemandPrice": 2.472
+}

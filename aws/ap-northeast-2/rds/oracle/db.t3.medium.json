@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "ap-northeast-2",
+  "service": "ec2",
+  "instanceType": "db.t3.medium",
+  "databaseEngine": "oracle",
+  "onDemandPrice": 0.176
+}

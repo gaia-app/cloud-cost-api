@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "eu-central-1",
+  "service": "ec2",
+  "instanceType": "db.t2.small",
+  "databaseEngine": "mysql",
+  "onDemandPrice": 0.04
+}

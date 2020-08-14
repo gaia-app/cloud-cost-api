@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "eu-west-2",
+  "service": "ec2",
+  "instanceType": "db.m5.16xlarge",
+  "databaseEngine": "postgresql",
+  "onDemandPrice": 6.592
+}

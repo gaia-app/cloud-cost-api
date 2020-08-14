@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "ap-southeast-1",
+  "service": "ec2",
+  "instanceType": "db.m1.large",
+  "databaseEngine": "sql-server",
+  "onDemandPrice": 0.97
+}

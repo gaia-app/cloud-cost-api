@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "eu-west-2",
+  "service": "ec2",
+  "instanceType": "db.r4.large",
+  "databaseEngine": "oracle",
+  "onDemandPrice": 0.5564
+}

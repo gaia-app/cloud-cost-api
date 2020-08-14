@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "us-east-1",
+  "service": "ec2",
+  "instanceType": "db.m5.12xlarge",
+  "databaseEngine": "mysql",
+  "onDemandPrice": 4.104
+}

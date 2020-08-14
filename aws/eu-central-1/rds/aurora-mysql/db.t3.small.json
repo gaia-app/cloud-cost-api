@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "eu-central-1",
+  "service": "ec2",
+  "instanceType": "db.t3.small",
+  "databaseEngine": "aurora-mysql",
+  "onDemandPrice": 0.048
+}

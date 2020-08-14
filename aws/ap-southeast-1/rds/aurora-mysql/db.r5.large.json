@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "ap-southeast-1",
+  "service": "ec2",
+  "instanceType": "db.r5.large",
+  "databaseEngine": "aurora-mysql",
+  "onDemandPrice": 0.35
+}

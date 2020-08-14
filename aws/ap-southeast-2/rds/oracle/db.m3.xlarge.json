@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "ap-southeast-2",
+  "service": "ec2",
+  "instanceType": "db.m3.xlarge",
+  "databaseEngine": "oracle",
+  "onDemandPrice": 1.032
+}

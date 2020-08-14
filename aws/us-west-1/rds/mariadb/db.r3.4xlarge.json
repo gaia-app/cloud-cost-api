@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "us-west-1",
+  "service": "ec2",
+  "instanceType": "db.r3.4xlarge",
+  "databaseEngine": "mariadb",
+  "onDemandPrice": 2.11
+}

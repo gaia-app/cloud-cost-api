@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "us-east-1",
+  "service": "ec2",
+  "instanceType": "db.cv11.large",
+  "databaseEngine": "postgresql",
+  "onDemandPrice": 0.176
+}

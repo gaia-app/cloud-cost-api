@@ -1,0 +1,9 @@
+{
+  "provider": "aws",
+  "region": "ap-southeast-2",
+  "service": "ec2",
+  "instanceType": "db.r5.4xlarge",
+  "databaseEngine": "sql-server",
+  "onDemandPrice": 6.56
+}
+}

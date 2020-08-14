@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "ap-northeast-2",
+  "service": "ec2",
+  "instanceType": "db.r4.8xlarge",
+  "databaseEngine": "postgresql",
+  "onDemandPrice": 4.8
+}
