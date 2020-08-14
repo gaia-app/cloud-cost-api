@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "ca-central-1",
+  "service": "ec2",
+  "instanceType": "t2.nano",
+  "onDemandPrice": 0.0064,
+  "spotPrice": null
+}

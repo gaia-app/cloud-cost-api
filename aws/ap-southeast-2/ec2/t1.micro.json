@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "ap-southeast-2",
+  "service": "ec2",
+  "instanceType": "t1.micro",
+  "onDemandPrice": 0.02,
+  "spotPrice": 0.002
+}

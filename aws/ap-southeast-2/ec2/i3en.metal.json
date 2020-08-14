@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "ap-southeast-2",
+  "service": "ec2",
+  "instanceType": "i3en.metal",
+  "onDemandPrice": 13.008,
+  "spotPrice": 3.9024
+}

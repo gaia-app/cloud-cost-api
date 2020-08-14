@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "ap-southeast-2",
+  "service": "ec2",
+  "instanceType": "m5d.24xlarge",
+  "onDemandPrice": 6.816,
+  "spotPrice": 1.7365000000000002
+}

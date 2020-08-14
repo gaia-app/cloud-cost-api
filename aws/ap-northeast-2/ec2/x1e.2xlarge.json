@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "ap-northeast-2",
+  "service": "ec2",
+  "instanceType": "x1e.2xlarge",
+  "onDemandPrice": 2.418,
+  "spotPrice": 2.38525
+}

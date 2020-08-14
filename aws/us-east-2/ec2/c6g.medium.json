@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "us-east-2",
+  "service": "ec2",
+  "instanceType": "c6g.medium",
+  "onDemandPrice": 0.034,
+  "spotPrice": 0.01
+}

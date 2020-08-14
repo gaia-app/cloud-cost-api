@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "eu-central-1",
+  "service": "ec2",
+  "instanceType": "c4.large",
+  "onDemandPrice": 0.114,
+  "spotPrice": 0.04053333333333333
+}

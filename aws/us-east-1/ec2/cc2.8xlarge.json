@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "us-east-1",
+  "service": "ec2",
+  "instanceType": "cc2.8xlarge",
+  "onDemandPrice": 2,
+  "spotPrice": null
+}

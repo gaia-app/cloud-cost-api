@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "sa-east-1",
+  "service": "ec2",
+  "instanceType": "t3.medium",
+  "onDemandPrice": 0.0672,
+  "spotPrice": 0.035866666666666665
+}

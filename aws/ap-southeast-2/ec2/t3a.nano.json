@@ -1,0 +1,8 @@
+{
+  "provider": "aws",
+  "region": "ap-southeast-2",
+  "service": "ec2",
+  "instanceType": "t3a.nano",
+  "onDemandPrice": 0.0059,
+  "spotPrice": 0.0018000000000000002
+}
