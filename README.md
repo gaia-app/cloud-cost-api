@@ -9,9 +9,14 @@ Nephele is a cloud cost api, which a statically generated, and served using Gith
 It consists on statically generated JSON files, that can be used as if it where a classical API,
 but without the need to process the data for each request.
 
-For example : 
+## Api Docs
 
-```
+Api Docs is available at [https://nephele.gaia-app.io/swagger-ui](https://nephele.gaia-app.io/swagger-ui)
+
+## Examples
+
+
+```bash
 curl https://nephele.gaia-app.io/aws/eu-west-1/ec2/t3.micro.json
 
 {
@@ -23,3 +28,17 @@ curl https://nephele.gaia-app.io/aws/eu-west-1/ec2/t3.micro.json
   "spotPrice": 0.0034
 }
 ```
+
+```bash
+curl https://nephele.gaia-app.io/aws/eu-west-1/rds/postgresql/t3.micro.json
+
+{
+  "provider": "aws",
+  "region": "eu-west-1",
+  "service": "rds",
+  "databaseEngine": "postgresql",
+  "instanceType": "t3.micro",
+  "onDemandPrice": 0.02
+}
+```
+

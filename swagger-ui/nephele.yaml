@@ -1,0 +1,157 @@
+openapi: 3.0.3
+
+info:
+  title: Nephele
+  description: An API to get various cloud provider costs
+  version: 1.0.0
+  
+servers:
+  - url: https://nephele.gaia-app.io
+    description: published production server
+  
+paths:
+  /aws/{region}/ec2/{instanceType}.json:
+    get:
+      tags: [aws]
+      description: returns the cost for the given instanceType
+      parameters:
+      - $ref: "#/components/parameters/aws-region"
+      - name: instanceType
+        in: path
+        description: the cloud instance type (eg. t2.micro, db.t3.medium)
+        required: true
+        schema:
+          type: string
+        examples:
+          aws-t3-micro:
+            summary: AWS - RDS - t3.micro
+            value: t3.micro
+          aws-m5-large:
+            summary: AWS - RDS - m5.large
+            value: m5.large
+      responses: 
+        "200":
+          description: ok
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Instance"
+              examples:
+                aws:
+                  value: >
+                    {
+                      "provider": "aws",
+                      "region": "eu-west-1",
+                      "service": "ec2"
+                      "instanceType": "t3.micro",
+                      "onDemandPrice": 0.0114,
+                      "spotPrice": 0.0034
+                    }
+  /aws/{region}/rds/{engine}/{instanceType}.json:
+    get:
+      tags: [aws]
+      description: returns the cost for the given database engine and instanceType
+      parameters:
+      - $ref: "#/components/parameters/aws-region"
+      - name: engine
+        in: path
+        description: the database engine
+        required: true
+        schema:
+          type: string
+          enum: ["aurora-mysql", "aurora-postgresql", "mariadb", "mysql", "oracle", "postgresql", "sql-server"]
+      - name: instanceType
+        in: path
+        description: the cloud instance type (eg. t2.micro, db.t3.medium)
+        required: true
+        schema:
+          type: string
+        examples:
+          aws-t3-micro:
+            summary: AWS - RDS - db.t3.micro
+            value: db.t3.micro
+          aws-m5-large:
+            summary: AWS - RDS - db.m5.large
+            value: db.m5.large
+      responses: 
+        "200":
+          description: ok
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Instance"
+              examples:
+                aws:
+                  value: >
+                    {
+                      "provider": "aws",
+                      "region": "eu-west-1",
+                      "service": "ec2"
+                      "databaseEngine": "postgresql"
+                      "instanceType": "t3.micro",
+                      "onDemandPrice": 0.0114
+                    }          
+
+
+components:
+  parameters:
+    aws-region:       
+      in: path
+      name: region
+      description: the cloud provider region
+      required: true
+      schema:
+        type: string
+      examples:
+        aws-eu-west-1:
+          summary: AWS - eu-west-1
+          value: eu-west-1
+        aws-us-east-1:
+          summary: AWS - us-east-1
+          value: us-east-1
+          
+  schemas:
+    Instance:
+      type: object
+      properties:
+        provider:
+          type: string
+        region:
+          type: string
+        service:
+          type: string
+        instanceType:
+          type: string
+        onDemandPrice:
+          type: number
+          multipleOf: 0.0001
+        spotPrice:
+          type: number
+          multipleOf: 0.0001
+      example: >
+                {
+                  "provider": "aws",
+                  "region": "eu-west-1",
+                  "service": "ec2"
+                  "instanceType": "t3.micro",
+                  "onDemandPrice": 0.0114,
+                  "spotPrice": 0.0034
+                }     
+    DatabaseInstance:
+      type: object
+      properties:
+        provider:
+          type: string
+        region:
+          type: string
+        service:
+          type: string
+        databaseEngine:
+          type: string
+          description: the name of the database engine
+        instanceType:
+          type: string
+        onDemandPrice:
+          type: number
+          multipleOf: 0.0001        
+        
